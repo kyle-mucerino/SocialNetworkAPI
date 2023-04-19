@@ -1,4 +1,7 @@
-const date = new Date();
-const formattedDate = date.toLocaleString(); 
+const moment = require('moment');
 
-console.log(formattedDate); 
+const dateFormat = (date) => {
+  return moment(date).format("MMM DD, YYYY [at] hh:mm a");
+};
+
+module.exports = dateFormat;
